@@ -844,6 +844,8 @@ class Wechat
 	 * @return boolean
 	 */
 	protected function setCache($cachename,$value,$expired){
+        return \think\Cache::set($cachename, $value, $expired);
+
 		//TODO: set cache implementation
 		return false;
 	}
@@ -854,7 +856,9 @@ class Wechat
 	 * @return mixed
 	 */
 	protected function getCache($cachename){
-		//TODO: get cache implementation
+        return \think\Cache::get($cachename);
+
+        //TODO: get cache implementation
 		return false;
 	}
 
@@ -864,7 +868,9 @@ class Wechat
 	 * @return boolean
 	 */
 	protected function removeCache($cachename){
-		//TODO: remove cache implementation
+        return \think\Cache::rm($cachename);
+
+        //TODO: remove cache implementation
 		return false;
 	}
 
@@ -894,7 +900,7 @@ class Wechat
 		if ($result)
 		{
 			$json = json_decode($result,true);
-			if (!$json || isset($json['errcode'])) {
+			if (!$json || !empty($json['errcode'])) {
 				$this->errCode = $json['errcode'];
 				$this->errMsg = $json['errmsg'];
 				return false;
