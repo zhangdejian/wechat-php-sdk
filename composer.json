@@ -3,7 +3,7 @@
   "description" : "the wechat api library of thinkphp5 without framework dependency,it is fork from https://github.com/dodgepudding/wechat-php-sdk",
   "version" : "3.9",
   "require" : {
-    "php" : ">=5.1.0"
+    "php" : ">=7.1.0"
   },
   "authors" : [ {
     "name" : "dodgepudding",
