@@ -1,7 +1,7 @@
 {
   "name" : "zhqagp/wechat-php-sdk",
   "description" : "the wechat api library of thinkphp5 without framework dependency,it is fork from https://github.com/dodgepudding/wechat-php-sdk",
-  "version" : "1.1",
+  "version" : "3.1",
   "require" : {
     "php" : ">=5.1.0"
   },
