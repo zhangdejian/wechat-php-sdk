@@ -2034,7 +2034,13 @@ class Wechat
 	 * @return string
 	 */
 	public function getOauthRedirect($callback,$state='STATE',$scope='snsapi_base'){
-	    return self::OAUTH_PREFIX.self::OAUTH_AUTHORIZE_URL.'appid='.$this->appid.'&redirect_uri='.urlencode($callback).'&response_type=code&scope='.$scope.'&state='.$state.'#wechat_redirect';
+	    if ($scope != 'snsapi_base'){
+	        $agentid = $this->agentid;
+            return self::OAUTH_PREFIX.self::OAUTH_AUTHORIZE_URL.'appid='.$this->appid.'&redirect_uri='.urlencode($callback).'&response_type=code&scope='.$scope.'&agentid='.$this->agentid.'&state='.$state.'#wechat_redirect';
+
+        }else{
+            return self::OAUTH_PREFIX.self::OAUTH_AUTHORIZE_URL.'appid='.$this->appid.'&redirect_uri='.urlencode($callback).'&response_type=code&scope='.$scope.'&state='.$state.'#wechat_redirect';
+        }
 	}
 
 }
