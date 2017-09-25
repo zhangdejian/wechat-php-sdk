@@ -273,7 +273,7 @@ class Wechat
 		curl_setopt($oCurl, CURLOPT_RETURNTRANSFER, 1 );
 		curl_setopt($oCurl, CURLOPT_POST,true);
 		if(PHP_VERSION_ID >= 50500){
-			curl_setopt($oCurl, CURLOPT_SAFE_UPLOAD, FALSE);
+//			curl_setopt($oCurl, CURLOPT_SAFE_UPLOAD, FALSE);
 		}
 		curl_setopt($oCurl, CURLOPT_POSTFIELDS,$strPOST);
 

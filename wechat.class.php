@@ -1134,7 +1134,7 @@ class Wechat
 	        } else {
 	        	$is_curlFile = false;
 	            	if (defined('CURLOPT_SAFE_UPLOAD')) {
-	                	curl_setopt($oCurl, CURLOPT_SAFE_UPLOAD, false);
+//	                	curl_setopt($oCurl, CURLOPT_SAFE_UPLOAD, false);
 	            	}
 	        }
 		if (is_string($param)) {
