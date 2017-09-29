@@ -93,6 +93,7 @@ class Wechat
 	private $_receive;
 	private $_sendmsg;      //主动发送消息的内容
 	private $_text_filter = true;
+	private $jsapi_ticket;
 	public $debug =  false;
 	public $errCode = 40001;
 	public $errMsg = "no access";
